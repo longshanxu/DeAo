@@ -1,0 +1,12 @@
+# node.js
+#
+node_modules/
+npm-debug.log
+
+# F8
+#
+/release
+/logs
+/.idea
+/tmp
+/public
