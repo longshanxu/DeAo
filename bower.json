@@ -28,7 +28,7 @@
     "moment": "^2.14.1",
     "switchery": "^0.8.1",
     "eonasdan-bootstrap-datetimepicker": "^4.17.37",
-    "gmaps": "0.4.22",
+    "gmaps": "0.4.24",
     "trumbowyg": "^2.1.0",
     "blueimp-gallery": "^2.21.3",
     "leaflet": "^0.7.7",
