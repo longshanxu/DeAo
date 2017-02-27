@@ -19,7 +19,7 @@ import {
   ControlLabel,
   PanelContainer } from '@sketchpixy/rubix';
 
-@withRouter
+withRouter
 class EditTodoForm extends React.Component {
   editTodo(e) {
     e.preventDefault();
