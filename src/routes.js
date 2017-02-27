@@ -14,6 +14,7 @@ import Footer from './common/footer';
 
 import AllTodos from './routes/AllTodos';
 import EditTodo from './routes/EditTodo';
+import Social from './routes/Social';
 
 class App extends React.Component {
   render() {
@@ -40,5 +41,6 @@ export default (
   <Route path='/' component={App}>
     <IndexRoute component={AllTodos} />
     <Route path='/todo/edit/:id' component={EditTodo} />
+    <Route path='social' component={Social} />
   </Route>
 );

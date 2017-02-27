@@ -15,6 +15,12 @@ class ApplicationSidebar extends React.Component {
   handleChange(e) {
     this._nav.search(e.target.value);
   }
+  
+  getPath(path) {
+    var dir = this.props.location.pathname.search('rtl') !== -1 ? 'rtl' : 'ltr';
+    path = `/${dir}/${path}`;
+    return path;
+  }
 
   render() {
     return (
@@ -31,6 +37,14 @@ class ApplicationSidebar extends React.Component {
 
                   <SidebarNavItem glyph='icon-outlined-todolist' name='All Todos' href='/' />
                   <SidebarNavItem glyph='icon-outlined-pencil' name='Edit Todo' href='/todo/edit/:id' />
+
+                  <SidebarDivider />
+
+                  { /** Test Section */ }
+                  <div className='sidebar-header'>COMPONENTS</div>
+
+                  <SidebarNavItem glyph='icon-feather-share' name='Social' href={this.getPath('social')} />
+
                 </SidebarNav>
               </div>
             </Col>
