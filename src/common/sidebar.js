@@ -15,7 +15,7 @@ class ApplicationSidebar extends React.Component {
   handleChange(e) {
     this._nav.search(e.target.value);
   }
-  
+
   getPath(path) {
     var dir = this.props.location.pathname.search('rtl') !== -1 ? 'rtl' : 'ltr';
     path = `/${dir}/${path}`;
@@ -41,9 +41,9 @@ class ApplicationSidebar extends React.Component {
                   <SidebarDivider />
 
                   { /** Test Section */ }
-                  <div className='sidebar-header'>COMPONENTS</div>
+                  <div className='sidebar-header'>COMPONENTS 2</div>
 
-                  <SidebarNavItem glyph='icon-feather-share' name='Social' href={this.getPath('social')} />
+                  <SidebarNavItem glyph='icon-feather-share' name='Social'  />
 
                 </SidebarNav>
               </div>
