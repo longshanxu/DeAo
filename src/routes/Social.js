@@ -19,7 +19,7 @@ class SocialBanner extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      follow: 'follow me',
+      follow: '开课',
       followActive: false,
       likeCount: 999,
       likeActive: false,
@@ -28,7 +28,7 @@ class SocialBanner extends React.Component {
   }
   handleFollow() {
     this.setState({
-      follow: 'followed',
+      follow: '开课中...',
       followActive: true
     });
   }
@@ -46,8 +46,8 @@ class SocialBanner extends React.Component {
         </div>
         <div className='social-desc'>
           <div>
-            <h1 className='fg-white'>Empire State, NY, USA</h1>
-            <h5 className='fg-white' style={{opacity: 0.8}}>- Aug 20th, 2014</h5>
+            <h1 className='fg-white'>当前课题：临床医学</h1>
+            <h5 className='fg-white' style={{opacity: 0.8}}>- 2017年2月27日</h5>
             <div style={{marginTop: 50}}>
               <div style={{display: 'inline-block'}}>
                 <Button id='likeCount' retainBackground rounded bsStyle='orange75' active={this.state.likeActive} onClick={::this.handleLike}>
@@ -60,8 +60,8 @@ class SocialBanner extends React.Component {
         </div>
         <div className='social-avatar'>
           <Image src='/imgs/app/avatars/avatar.jpg' height='100' width='100' style={{display: 'block', borderRadius: 100, border: '2px solid #fff', margin: 'auto', marginTop: 50}} />
-          <h4 className='fg-white text-center'>Anna Sanchez</h4>
-          <h5 className='fg-white text-center' style={{opacity: 0.8}}>DevOps Engineer, NY</h5>
+          <h4 className='fg-white text-center'>张老师</h4>
+          <h5 className='fg-white text-center' style={{opacity: 0.8}}>临床医学专家</h5>
           <hr className='border-black75' style={{borderWidth: 2}}/>
           <div className='text-center'>
             <Button outlined inverse retainBackground active={this.state.followActive} bsStyle='brightblue' onClick={::this.handleFollow}>

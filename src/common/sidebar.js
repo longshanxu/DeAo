@@ -35,7 +35,7 @@ class ApplicationSidebar extends React.Component {
                   <SidebarDivider />
 
                   { /** Test Section */ }
-                  <div className='sidebar-header'>Test Routes</div>
+                  <div className='sidebar-header'>Test Routes By Json</div>
 
                   <SidebarNavItem glyph='icon-feather-share' name='Social' href='/social'  />
 
