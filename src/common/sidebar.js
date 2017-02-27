@@ -16,12 +16,6 @@ class ApplicationSidebar extends React.Component {
     this._nav.search(e.target.value);
   }
 
-  getPath(path) {
-    var dir = this.props.location.pathname.search('rtl') !== -1 ? 'rtl' : 'ltr';
-    path = `/${dir}/${path}`;
-    return path;
-  }
-
   render() {
     return (
       <div>
@@ -42,6 +36,8 @@ class ApplicationSidebar extends React.Component {
 
                   { /** Test Section */ }
                   <div className='sidebar-header'>Test Routes</div>
+
+                  <SidebarNavItem glyph='icon-feather-share' name='Social' href='/social'  />
 
                 </SidebarNav>
               </div>
