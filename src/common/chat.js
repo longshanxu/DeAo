@@ -1,7 +1,25 @@
 import React from 'react';
+import classNames from 'classnames';
+import { withRouter } from 'react-router';
+
 
 import {
-  Grid, Row, Col
+  Row,
+  Col,
+  Icon,
+  Grid,
+  Label,
+  Badge,
+  Panel,
+  Button,
+  PanelLeft,
+  PanelBody,
+  ListGroup,
+  LoremIpsum,
+  ButtonGroup,
+  ButtonToolbar,
+  ListGroupItem,
+  PanelContainer,
 } from '@sketchpixy/rubix';
 
 class ChatNav extends React.Component {
@@ -44,6 +62,41 @@ class ChatItem extends React.Component {
   }
 }
 
+withRouter
+class InboxItem extends React.Component {
+  handleClick(e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    this.props.router.push('/ltr/mailbox/mail');
+  }
+  render() {
+    var classes = classNames({
+      'inbox-item': true,
+      'unread': this.props.unread
+    });
+
+    var linkProps = {
+      href: '/ltr/mailbox/mail',
+      onClick: ::this.handleClick,
+      className: classes,
+    };
+
+    return (
+      <a {...linkProps}>
+        <div className='inbox-avatar'>
+          <img src={this.props.src} width='40' height='40' className={this.props.imgClass + ' hidden-xs'} />
+          <div className='inbox-avatar-name'>
+            <div><small><span>{this.props.date}</span></small></div>
+            <div className='fg-darkgrayishblue75'>{this.props.name}</div>
+            <div><small><span>{this.props.description}</span></small></div>
+          </div>
+        </div>
+      </a>
+    );
+  }
+}
+
 export default class Chat extends React.Component {
   render() {
     return (
@@ -51,17 +104,12 @@ export default class Chat extends React.Component {
         <Grid>
           <Row>
             <Col xs={12}>
-              <div className='sidebar-nav-container'>
-                <ChatNav style={{marginBottom: 0}}>
-                  <ChatItem name='Jordyn Ouellet' avatar='avatar5' online />
-                  <ChatItem name='Ava Parry' avatar='avatar9' online />
-                  <ChatItem name='Angelina Mills' avatar='avatar10' online />
-                  <ChatItem name='Crystal Ford' avatar='avatar11' online />
-                  <ChatItem name='Evan Poulain' avatar='avatar19' />
-                  <ChatItem name='Canan Erdem' avatar='avatar18' />
-                  <ChatItem name='Antelope Inc.' avatar='avatar8' />
-                </ChatNav>
-              </div>
+                <InboxItem itemId={1} unread src='/imgs/app/avatars/1.png' name='临床医学' labelValue='SOME LABEL' labelClass='bg-green fg-white' description={<span><strong>张老师: </strong><span></span></span>} date='10：00-11：00'/>
+                <InboxItem itemId={2} src='/imgs/app/avatars/1.png'  name='设计几何学' labelValue='SOME LABEL' labelClass='bg-green fg-white' description={<span><strong>张老师: </strong><span></span></span>} date='11：00-12：00'/>
+                <InboxItem itemId={3} src='/imgs/app/avatars/1.png'  name='户外实习' labelValue='SOME LABEL' labelClass='bg-green fg-white' description={<span><strong>张老师: </strong><span></span></span>} date='13：00-14：00'/>
+                <InboxItem itemId={4} src='/imgs/app/avatars/1.png' name='英语口语' labelValue='SOME LABEL' labelClass='bg-green fg-white' description={<span><strong>王老师: </strong><span></span></span>} date='15：00-16：00'/>
+                <InboxItem itemId={5} src='/imgs/app/avatars/1.png'  name='应急科学' labelValue='SOME LABEL' labelClass='bg-green fg-white' description={<span><strong>王老师: </strong><span></span></span>} date='17：00-18：00'/>
+                <InboxItem itemId={6}  src='/imgs/app/avatars/1.png' name='户外实习' labelValue='SOME LABEL' labelClass='bg-green fg-white' description={<span><strong>王老师: </strong><span></span></span>} date='19：00-20：00'/>                                                             
             </Col>
           </Row>
         </Grid>

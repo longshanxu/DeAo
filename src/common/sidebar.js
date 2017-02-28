@@ -13,25 +13,6 @@ import { Link, withRouter } from 'react-router';
 import ChatComponent from './chat';
 
 withRouter
-class Application1Sidebar extends React.Component {
-  handleChange(e) {
-    this._nav.search(e.target.value);
-  }
-
-  render() {
-    return (
-      <div>
-        <Grid>
-          <Row>
-           
-          </Row>
-        </Grid>
-      </div>
-    );
-  }
-}
-
-withRouter
 export default class SidebarContainer extends React.Component {
   render() {
     return (
@@ -48,9 +29,6 @@ export default class SidebarContainer extends React.Component {
         <div id='sidebar-container'>
           <Sidebar sidebar={0}>
               <ChatComponent />
-          </Sidebar>
-          <Sidebar sidebar={1}>
-              <Application1Sidebar /> 
           </Sidebar>
         </div>
       </div>
