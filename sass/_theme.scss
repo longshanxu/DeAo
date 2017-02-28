@@ -7,22 +7,22 @@
 
 @include theme-maker("green", (
   theme (
-    bg #2EB398
+    bg #6cbb52
   ),
   header (
     logout (
-      bg #2EB398,
+      bg #6cbb52,
       hover-bg #31C0A3
     ),
   ),
   sidebar (
     avatar (
-      bg #56B596
+      bg #6cbb52
     ),
     controls (
-      bg #279982,
+      bg #4d873a,
       btn (
-        color #1B6858,
+        color #ffffff,
         border darken(#279982, 2%),
         active-bg #1E7362,
         active-color #56B596
